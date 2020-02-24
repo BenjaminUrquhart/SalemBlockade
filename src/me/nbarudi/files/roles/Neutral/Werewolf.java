@@ -7,32 +7,31 @@ import org.bukkit.ChatColor;
 import me.nbarudi.files.roles.Role;
 import me.nbarudi.files.roles.RoleAbilities;
 
-public class Survivor extends Role {
+public class Werewolf extends Role {
 
-	public Survivor(String name) {
+	public Werewolf(String name) {
 		super(name);
-		this.attack = 0;
-		this.defense = 0;
+		this.attack = 1;
+		this.defense = 1;
 		
 		
 		ArrayList<String> abil = new ArrayList<String>();
-		abil.add("Put on a bullet proof vest");
+		abil.add(".");
 		
 		ArrayList<String> atrib = new ArrayList<String>();
-		atrib.add("Putting on a bulletproof vest gives you Basic defense.");
-		atrib.add("You can only use the bulletproof vest 4 times.");
+		atrib.add(".");
 		
 		ArrayList<String> wincond = new ArrayList<String>();
-		wincond.add("§0Everyone");
+		wincond.add("ï¿½7ï¿½lWeerewolf");
 		
-		this.teamname = "§7Neutral\n(§bBenign§7)";
+		this.teamname = "ï¿½7Neutral\n(ï¿½bKillingï¿½7)";
 		
 		this.attributes = atrib;
 		this.abilities = abil;
 		this.winconditions = wincond;
-		this.team = ChatColor.GOLD;
-		this.ra = RoleAbilities.VEST;
-		this.priority = 3;
+		this.team = ChatColor.DARK_BLUE;
+		this.ra = RoleAbilities.KILL;
+		this.priority = 5;
 	}
 
 }
